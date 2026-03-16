@@ -2,16 +2,19 @@ import streamlit as st
 import pandas as pd
 import sqlite3
 import joblib
+import os
 
 # --------------------------
 # Load model
 # --------------------------
-model = joblib.load("models/latest_model.pkl")
+model_path = os.path.join(os.path.dirname(__file__), "..", "models", "latest_model.pkl")
+model = joblib.load(model_path)
 
 # --------------------------
 # Load dataset from SQL
 # --------------------------
-conn = sqlite3.connect("database/gym_data.db")
+db_path = os.path.join(os.path.dirname(__file__), "..", "database", "gym_data.db")
+conn = sqlite3.connect(db_path)
 df = pd.read_sql("SELECT * FROM gym_willingness", conn)
 conn.close()
 
