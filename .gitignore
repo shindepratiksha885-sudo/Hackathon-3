@@ -1,4 +1,59 @@
-*.pkl
+# Python artifacts
 __pycache__/
-*.pyc
+*.py[cod]
+*.pyo
+*.pyd
+
+# Environment / dependency folders
 .env
+env/
+venv/
+.venv/
+
+# IDE/editor settings
+.vscode/
+*.sublime-workspace
+*.sublime-project
+
+# macOS / Windows
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Large/binary model or data files (unviewable on GitHub)
+*.pkl
+*.h5
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.tflite
+*.pb
+*.bin
+
+# Dataset/cache files
+*.npz
+*.npy
+*.csv
+*.parquet
+
+# Database files (keep the repo database file tracked if needed)
+# Note: If you want a specific .db file tracked, do NOT add it here, or add an exception below.
+# Example: to keep `database/gym_data.db` tracked, ensure it is not ignored.
+*.db
+# !database/*.db
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Packaging / build
+build/
+dist/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
