@@ -18,6 +18,49 @@ The goal of this project is to demonstrate how a machine learning model can be e
 University students often struggle with maintaining a consistent fitness routine due to academic workload, stress levels, sleep patterns, and energy fluctuations. This project aims to build a predictive model that determines whether a student is likely to want to go to the gym on a given day (Yes/No) based on lifestyle and behavioral factors.
 
 ---
+## System Architecture
+
+Data Generation → SQL Database → Model Training → Model Selection → Saved Model → Streamlit Dashboard → Prediction → Retraining
+
+---
+## How It Works
+
+1. Synthetic data is generated using Python scripts  
+2. Data is stored in a SQL database (SQLite)  
+3. Multiple ML models are trained and evaluated  
+4. Best model is selected and saved  
+5. Streamlit dashboard allows user interaction  
+6. Retraining pipeline updates the model
+
+---
+## Model Lifecycle
+
+The system supports continuous improvement:
+
+- New data is added to the database  
+- Models are retrained  
+- New versions are saved  
+- Latest model is used in dashboard
+  
+---
+## Dashboard Preview
+
+The project includes an interactive Streamlit dashboard designed to provide a user-friendly interface for prediction and analysis.
+
+### Features
+
+- User input panel to enter lifestyle and behavioral factors such as study hours, sleep, stress level, and energy level  
+- Predicts whether a student is willing to go to the gym (Yes/No)  
+- Displays probability score for better interpretation  
+- Clean and intuitive UI for easy interaction  
+- Interactive visualizations including 3D plots to analyze relationships between features  
+- Project timeline section for understanding development stages  
+
+### Purpose
+
+The dashboard makes the machine learning model accessible to users, allowing real-time predictions without requiring technical knowledge. It focuses on usability, visualization, and interaction rather than raw data display.
+
+---
 
 ## Features
 
@@ -196,8 +239,3 @@ This project demonstrates a complete machine learning pipeline including:
 * Model lifecycle management
 
 The system shows how machine learning models can be engineered into practical applications rather than remaining experimental code.
-
----
-
-If you want, I can also give you **one more thing that will impress your professor a lot**:
-a **clean architecture diagram for this project (the one they often ask in viva)**.
